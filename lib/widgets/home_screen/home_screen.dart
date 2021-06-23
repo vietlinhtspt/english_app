@@ -95,7 +95,7 @@ class _HomeWidgetState extends State<HomeWidget>
                   ),
                   Tab(
                     child: Text(
-                      "Mix",
+                      "Mixed",
                       style: _indexSelectedTabar == 2
                           ? Theme.of(context)
                               .textTheme

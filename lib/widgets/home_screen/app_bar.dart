@@ -34,7 +34,7 @@ class _AppbarState extends State<Appbar> {
         this.isSearching = false;
         this._searchBarTitle = new Text(
           'Bài hát, playlist, ...',
-          style: TextStyle(fontSize: 18, color: Color.fromRGBO(87, 87, 87, 50)),
+          style: Theme.of(context).textTheme.headline6,
           textAlign: TextAlign.left,
         );
       }
@@ -79,9 +79,7 @@ class _AppbarState extends State<Appbar> {
                       ),
                       new Text(
                         'Bài hát, playlist, ...',
-                        style: TextStyle(
-                            fontSize: 15,
-                            color: Color.fromRGBO(87, 87, 87, 50)),
+                        style: Theme.of(context).textTheme.bodyText2,
                         textAlign: TextAlign.left,
                       )
                     ],
@@ -93,7 +91,6 @@ class _AppbarState extends State<Appbar> {
           margin: EdgeInsets.all(10),
           child: Icon(
             Icons.settings,
-            color: Color.fromRGBO(87, 87, 87, 50),
           ),
         )
       ],

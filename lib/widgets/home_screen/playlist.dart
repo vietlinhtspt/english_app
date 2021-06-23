@@ -19,20 +19,7 @@ class _PlaylistState extends State<Playlist> {
         Container(
           child: Row(
             children: [
-              Container(
-                width: 40,
-                height: 40,
-                margin: EdgeInsets.all(10),
-                decoration: BoxDecoration(
-                    color: kPrimaryColor,
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(10),
-                    )),
-                child: Icon(
-                  Icons.add_circle_outline,
-                  color: Colors.white,
-                ),
-              ),
+              IconWithBackgroud(),
               Text(
                 "Tạo playlist",
                 style: Theme.of(context).textTheme.bodyText1,
@@ -44,6 +31,30 @@ class _PlaylistState extends State<Playlist> {
         PlaylistItem("Playlist #2"),
         PlaylistItem("Playlist #3")
       ],
+    );
+  }
+}
+
+class IconWithBackgroud extends StatelessWidget {
+  const IconWithBackgroud({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      width: 40,
+      height: 40,
+      margin: EdgeInsets.all(10),
+      decoration: BoxDecoration(
+          color: kPrimaryColor,
+          borderRadius: BorderRadius.all(
+            Radius.circular(10),
+          )),
+      child: Icon(
+        Icons.add_circle_outline,
+        color: Colors.white,
+      ),
     );
   }
 }

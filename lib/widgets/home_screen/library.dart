@@ -1,3 +1,4 @@
+import 'package:english_app/widgets/list_audio_screen/list_audio_screen.dart';
 import 'package:flutter/material.dart';
 import '../../constants/app_constants.dart';
 
@@ -51,43 +52,49 @@ class LibraryItem extends StatelessWidget {
   LibraryItem(this.icon, this.iconContent, this.backgoundItemColor);
 
   Widget build(BuildContext context) {
-    return Container(
-      width: 140,
-      margin: EdgeInsets.only(left: 5, right: 5, bottom: 20),
-      decoration: BoxDecoration(
-          color: Theme.of(context).cardColor,
-          borderRadius: BorderRadius.all(
-            Radius.circular(10),
-          ),
-          boxShadow: [
-            BoxShadow(
-              color: Theme.of(context).shadowColor,
-              spreadRadius: 1,
-              blurRadius: 7,
-              offset: Offset(0, 1), // changes position of shadow
-            )
-          ]),
-      padding: EdgeInsets.all(10),
-      child: Column(
-        children: [
-          Container(
-            width: 30,
-            height: 30,
-            decoration: BoxDecoration(
-                color: this.backgoundItemColor,
-                borderRadius: BorderRadius.all(
-                  Radius.circular(5),
-                )),
-            child: Icon(
-              this.icon,
-              color: Colors.white,
+    return GestureDetector(
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: (context) => ListAuidioScreen()));
+      },
+      child: Container(
+        width: 140,
+        margin: EdgeInsets.only(left: 5, right: 5, bottom: 20),
+        decoration: BoxDecoration(
+            color: Theme.of(context).cardColor,
+            borderRadius: BorderRadius.all(
+              Radius.circular(10),
             ),
-          ),
-          Container(
-            margin: EdgeInsets.only(top: 8),
-            child: Text(this.iconContent.toString()),
-          )
-        ],
+            boxShadow: [
+              BoxShadow(
+                color: Theme.of(context).shadowColor,
+                spreadRadius: 1,
+                blurRadius: 7,
+                offset: Offset(0, 1), // changes position of shadow
+              )
+            ]),
+        padding: EdgeInsets.all(10),
+        child: Column(
+          children: [
+            Container(
+              width: 30,
+              height: 30,
+              decoration: BoxDecoration(
+                  color: this.backgoundItemColor,
+                  borderRadius: BorderRadius.all(
+                    Radius.circular(5),
+                  )),
+              child: Icon(
+                this.icon,
+                color: Colors.white,
+              ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 8),
+              child: Text(this.iconContent.toString()),
+            )
+          ],
+        ),
       ),
     );
   }
