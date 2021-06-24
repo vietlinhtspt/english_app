@@ -21,13 +21,14 @@ class _ListAuidioScreenState extends State<ListAuidioScreen> {
           icon: Icon(Icons.arrow_back_ios),
           onPressed: () => Navigator.pop(context),
         ),
+        title: Container(
+            // decoration: BoxDecoration(color: Colors.white),
+            margin: EdgeInsets.only(left: 1),
+            child: Text(
+              "Tên danh sách phát (1)",
+              style: TextStyle(color: Colors.white, fontSize: 18),
+            )),
         actions: [
-          Expanded(
-              child: Center(
-                  child: Text(
-            "Tên danh sách phát",
-            style: TextStyle(color: Colors.white),
-          ))),
           Icon(Icons.settings),
           SizedBox(
             width: kDefaultPadding / 2,

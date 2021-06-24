@@ -21,7 +21,9 @@ class AudioItem extends StatelessWidget {
           )),
           Expanded(
               child: Container(
-                  alignment: Alignment.topRight, child: Icon(Icons.menu)))
+                  margin: EdgeInsets.only(right: kDefaultPadding / 2),
+                  alignment: Alignment.topRight,
+                  child: Icon(Icons.menu)))
         ],
       ),
     );

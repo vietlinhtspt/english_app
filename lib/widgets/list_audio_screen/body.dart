@@ -31,24 +31,21 @@ class _BodyState extends State<Body> {
                           topLeft: Radius.circular(24),
                           topRight: Radius.circular(24))),
                 ),
-                Expanded(
-                  child: Column(
-                    children: [
-                      Container(
-                        padding: EdgeInsets.all(kDefaultPadding / 4 * 3),
-                        margin: EdgeInsets.only(top: kDefaultPadding * 2),
-                        decoration: BoxDecoration(
-                            color: Theme.of(context).primaryColor,
-                            borderRadius:
-                                BorderRadius.all(Radius.circular(24))),
-                        child: Text(
-                          "Phát ngẫu nhiên",
-                          style: Theme.of(context).textTheme.headline6,
-                        ),
+                Column(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.all(kDefaultPadding / 4 * 3),
+                      margin: EdgeInsets.only(top: kDefaultPadding * 2),
+                      decoration: BoxDecoration(
+                          color: Theme.of(context).primaryColor,
+                          borderRadius: BorderRadius.all(Radius.circular(24))),
+                      child: Text(
+                        "Phát ngẫu nhiên",
+                        style: Theme.of(context).textTheme.headline6,
                       ),
-                      AudioItem()
-                    ],
-                  ),
+                    ),
+                    AudioItem()
+                  ],
                 ),
               ],
             ),
