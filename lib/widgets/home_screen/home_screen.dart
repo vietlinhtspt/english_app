@@ -18,8 +18,6 @@ class _HomeWidgetState extends State<HomeWidget>
     with SingleTickerProviderStateMixin {
   late TabController _tabController;
 
-  int _indexSelectedTabar = 0;
-
   @override
   void dispose() {
     _tabController.dispose();
@@ -64,17 +62,11 @@ class _HomeWidgetState extends State<HomeWidget>
               TabBar(
                 indicatorColor: Theme.of(context).primaryColor,
                 controller: _tabController,
-                labelColor: Colors.red,
-                onTap: (index) {
-                  this.setState(() {
-                    _indexSelectedTabar = index;
-                  });
-                },
                 tabs: <Widget>[
                   Tab(
                     child: Text(
                       "Playlist",
-                      style: _indexSelectedTabar == 0
+                      style: _tabController.index == 0
                           ? Theme.of(context)
                               .textTheme
                               .headline5!
@@ -85,7 +77,7 @@ class _HomeWidgetState extends State<HomeWidget>
                   Tab(
                     child: Text(
                       "Gần đây",
-                      style: _indexSelectedTabar == 1
+                      style: _tabController.index == 1
                           ? Theme.of(context)
                               .textTheme
                               .headline5!
@@ -96,7 +88,7 @@ class _HomeWidgetState extends State<HomeWidget>
                   Tab(
                     child: Text(
                       "Mixed",
-                      style: _indexSelectedTabar == 2
+                      style: _tabController.index == 2
                           ? Theme.of(context)
                               .textTheme
                               .headline5!
