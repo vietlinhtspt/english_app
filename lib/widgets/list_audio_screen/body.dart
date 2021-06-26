@@ -41,7 +41,10 @@ class _BodyState extends State<Body> {
                           borderRadius: BorderRadius.all(Radius.circular(24))),
                       child: Text(
                         "Phát ngẫu nhiên",
-                        style: Theme.of(context).textTheme.headline6,
+                        style: Theme.of(context)
+                            .textTheme
+                            .headline6!
+                            .apply(color: Colors.white),
                       ),
                     ),
                     AudioItem()
